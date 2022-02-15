@@ -1,5 +1,9 @@
 <template>
-<books-item></books-item>
+
+<div>
+  <router-view></router-view>
+</div>
+
 </template>
 
 <script>
