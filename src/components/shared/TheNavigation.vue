@@ -1,10 +1,10 @@
 <template>
     <nav>
-        <router-link to="/">Books</router-link>
+        <router-link to="/">ViSomElskerBøker</router-link>
         <div>
             <ul>
                 <li><router-link to="/">Hjem</router-link></li>
-                <li><router-link to="/profile"></router-link></li>
+                <li><router-link to="/profile">Profil</router-link></li>
             </ul>
         </div>
     </nav>
