@@ -14,6 +14,7 @@
 <script>
 import booksService from '../../service/booksService.js'
 import BooksItem from '../books/BooksItem.vue'
+
 export default {
     name: 'App',
     setup(){
@@ -23,9 +24,7 @@ export default {
 
     },
   components: { 
-      BooksItem, 
-      booksService
-      
+      BooksItem 
       }
 
 }

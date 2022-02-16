@@ -3,7 +3,7 @@
   <article class="col-lg-4 col-sm-6 col-xs-12">
 
   <div class="card mt-5" style="width: 18rem;">
-  <img :src="getBookImg()" class="card-img-top" alt="image of book">  
+  <img :src="getImage()" class="card-img-top" alt="image of book">  
   <div class="card-body">
     <h5 class="card-title">{{ name }}</h5>
     <p class="card-text">Genre: {{ genre }}</p>
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+// import { ref } from 'vue'
 
 export default({
 
@@ -29,21 +29,21 @@ export default({
     }, 
 
 
-    setup(props){
+    // setup(props){
 
-        const getImage = () => {
-            let image;
-            try{ 
-                image = require( `@/assets/images/${ props.image }` );
-            }catch{
-                image = require( `` );
-            }
-            return image;
-        }
+    //     const getImage = () => {
+    //         let image;
+    //         try{ 
+    //             image = require( `@/assets/images/${ props.image }` );
+    //         }catch{
+    //             image = require( `` );
+    //         }
+    //         return image;
+    //     }
 
-        return { getImage }
+    //     return { getImage }
 
-    }
+    // }
 
 })
 
