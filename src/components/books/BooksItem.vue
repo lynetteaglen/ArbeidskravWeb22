@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import { ref } from 'vue'
 
 export default({
 
@@ -25,7 +26,28 @@ export default({
         images : String, 
         genre: String, 
         author: String
+    }, 
+
+
+    setup(props){
+
+        const getImage = () => {
+            let image;
+            try{ 
+                image = require( `@/assets/images/${ props.image }` );
+            }catch{
+                image = require( `@/assets/images/no-image.jpg` );
+            }
+            return image;
+        }
+
+        return { getImage }
+
     }
 
 })
+
+
+
+
 </script>
