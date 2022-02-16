@@ -1,8 +1,7 @@
 <template>
-    <h1>PROFIL</h1>
-
-    <h2>Velkommen, Timothée</h2>
-
+<section>
+    <h1>Hei Timothèe</h1>
+    
     <section>
         <h2>Dine favoritter</h2>
         <ul>
@@ -24,6 +23,8 @@
             <li></li>
         </ul>
     </section>
+
+</section>
 
 
 </template>

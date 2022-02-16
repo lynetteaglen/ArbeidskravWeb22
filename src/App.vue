@@ -1,8 +1,12 @@
 <template>
 <the-navigation></the-navigation>
+<div class="container">
 <div>
   <router-view></router-view>
+
 </div>
+</div>
+
 
 </template>
 
