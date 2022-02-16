@@ -5,7 +5,7 @@
   <div class="card mt-5" style="width: 18rem;">
   <img :src="getBookImg()" class="card-img-top" alt="image of book">  
   <div class="card-body">
-    <h5 class="card-title">{{ name }}</h5>
+    <h5 class="card-title">{{ name }}</h5>
     <p class="card-text">Genre: {{ genre }}</p>
     <p class="card-text">Author: {{ author }}</p>
     <a href="#" class="btn btn-primary">Add to reading list</a>
@@ -36,7 +36,7 @@ export default({
             try{ 
                 image = require( `@/assets/images/${ props.image }` );
             }catch{
-                image = require( `@/assets/images/no-image.jpg` );
+                image = require( `` );
             }
             return image;
         }
@@ -46,8 +46,5 @@ export default({
     }
 
 })
-
-
-
 
 </script>

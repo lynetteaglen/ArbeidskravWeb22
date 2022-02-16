@@ -2,7 +2,7 @@
     <h2> Books</h2>
 
     <section>
-        <books-item v-for="i in booksArray" :key="i"
+        <books-item v-for="(booksArray, i) in books" :key="i"
         :name="booksArray.name"
         :genre="booksArray.genre"
         :author="booksArray.author"
@@ -12,13 +12,20 @@
 
 
 <script>
-import BooksItem from './BooksItem.vue'
-
+import booksService from '../../service/booksService.js'
+import BooksItem from '../books/BooksItem.vue'
 export default {
     name: 'App',
-    setup(){},
+    setup(){
+
+        const books = booksService.getAllBooks(); 
+        return { books }
+
+    },
   components: { 
-      BooksItem 
+      BooksItem, 
+      booksService
+      
       }
 
 }
