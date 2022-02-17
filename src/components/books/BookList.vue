@@ -6,6 +6,7 @@
     <section>
         <books-item v-for="(booksArray, i) in books" :key="i"
         :name="booksArray.name"
+        :image="booksArray.image"
         :genre="booksArray.genre"
         :author="booksArray.author"
         :image="booksArray.image"
