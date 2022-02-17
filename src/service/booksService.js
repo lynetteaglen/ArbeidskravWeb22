@@ -44,7 +44,12 @@ const booksService = (function () {
         return booksArray; 
     }
 
-    return {getAllBooks}
+
+    const getBooksByName = (bookName) => {
+        return booksArray.filter(bookObject => bookObject.name === bookName)
+    }
+
+    return {getAllBooks, getBooksByName}
 
 }())
 
