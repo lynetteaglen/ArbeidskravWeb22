@@ -1,15 +1,23 @@
 <template>
 
+<section class="container">
+    <h2>Legg til en bok i leselista</h2>
+    <div class="col-lg-12 col-sm-6 col-xs-12">
+        <form>
+        <input type="text" v-model="searchBooks" placeholder="Søk etter en bok"/>
+        <button @click="books">Søk</button>
+        </form>
 
-    
+    </div>
+</section>
+
 </template>
 
 <script>
 
-import {ref} from 'vue'
+import { ref } from 'vue'
 
 export default({
-
     setup(){
 
 const books = ref([
