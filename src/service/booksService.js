@@ -34,7 +34,7 @@ const booksService = (function () {
         },
         {
             name: 'Eleanor and Park', 
-            image: '.jpeg', 
+            image: 'eleanor.jpeg', 
             genre: 'Fiction', 
             author: 'Rainbow Powell'
         }
