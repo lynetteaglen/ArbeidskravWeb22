@@ -1,28 +1,50 @@
 <template>
-    <h2> Books</h2>
-
+   <form>
+        <input type="search" v-model="searchBooks" placeholder="Søk etter bøker"/>
+        <button @click="resultsBooks" type="button">søk</button>
+   </form>
     <section>
         <books-item v-for="(booksArray, i) in books" :key="i"
         :name="booksArray.name"
         :genre="booksArray.genre"
         :author="booksArray.author"
+        :image="booksArray.image"
         ></books-item>
     </section>
 </template>
 
 
 <script>
+import { ref } from 'vue'
+import { reactive } from '@vue/reactivity'
+
 import booksService from '../../service/booksService.js'
 import BooksItem from '../books/BooksItem.vue'
 
+
 export default {
-    name: 'App',
-    setup(){
+    setup() {
+        let searchBooks = ref("")
+        let resultsBooks = ref([""])
 
-        const books = booksService.getAllBooks(); 
-        return { books }
+        const check = reactive({
+          clicked: false,
+        })
 
+        const books = booksService.getAllBooks()
+        
+        const showBooks = () => {
+        check.clicked = true
+        console.log(searchBooks.value)
+        let yes = books[searchBooks.value]
+        return resultsBooks.value = yes
+        }
+
+        return {
+            books, searchBooks, resultsBooks, showBooks, check,
+        }
     },
+
   components: { 
       BooksItem 
       }
