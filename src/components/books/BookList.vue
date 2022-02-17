@@ -9,7 +9,6 @@
         :image="booksArray.image"
         :genre="booksArray.genre"
         :author="booksArray.author"
-        :image="booksArray.image"
         ></books-item>
     </section>
 </template>
