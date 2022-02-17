@@ -1,6 +1,6 @@
 <template>
    <form>
-        <input type="search" v-model="searchBooks" placeholder="Søk etter bøker"/>
+        <input type="text" v-model="searchBooks" placeholder="Søk etter bøker"/>
         <button @click="resultsBooks" type="button">søk</button>
    </form>
     <section>
@@ -16,32 +16,31 @@
 
 <script>
 import { ref } from 'vue'
-import { reactive } from '@vue/reactivity'
-
 import booksService from '../../service/booksService.js'
 import BooksItem from '../books/BooksItem.vue'
 
 
 export default {
     setup() {
-        let searchBooks = ref("")
-        let resultsBooks = ref([""])
-
-        const check = reactive({
-          clicked: false,
-        })
+        const searchBooks = ref("");
+        const resultsBooks = ref("");
 
         const books = booksService.getAllBooks()
         
         const showBooks = () => {
-        check.clicked = true
-        console.log(searchBooks.value)
-        let yes = books[searchBooks.value]
-        return resultsBooks.value = yes
+            let chosenSearch = parseInt(searchBooks.value)
+
+            if( chosenSearch >= 0 && chosenSearch > books.length){
+                chosenSearch.value = books[searchBooks.value];
+                searchBooks.value="";
+            } else {
+                books.value="";
+            }
+       
         }
 
         return {
-            books, searchBooks, resultsBooks, showBooks, check,
+            books, showBooks, searchBooks, resultsBooks,
         }
     },
 
