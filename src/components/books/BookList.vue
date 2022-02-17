@@ -4,21 +4,22 @@
         <button @click="resultsBooks" type="button">søk</button>
    </form>
     <section>
+          <div v-if="showBooks.length === 0">
         <books-item v-for="(booksArray, i) in books" :key="i"
         :name="booksArray.name"
         :image="booksArray.image"
         :genre="booksArray.genre"
         :author="booksArray.author"
         ></books-item>
-     
-    
+        </div>
+        <div v-else>
         <books-item v-for="(book,i) in showBooks" :key="i"
         :name="book.name"
         :image="book.image"
         :genre="book.genre"
         :author="book.author"
         ></books-item>
-    
+        </div>
     </section>
 </template>
 
