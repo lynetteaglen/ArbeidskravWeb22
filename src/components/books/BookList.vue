@@ -4,14 +4,21 @@
         <button @click="resultsBooks" type="button">søk</button>
    </form>
     <section>
-        <h3>{{showBooks.name}}</h3>
         <books-item v-for="(booksArray, i) in books" :key="i"
         :name="booksArray.name"
         :image="booksArray.image"
         :genre="booksArray.genre"
         :author="booksArray.author"
         ></books-item>
-
+     
+    
+        <books-item v-for="(book,i) in showBooks" :key="i"
+        :name="book.name"
+        :image="book.image"
+        :genre="book.genre"
+        :author="book.author"
+        ></books-item>
+    
     </section>
 </template>
 
@@ -25,15 +32,17 @@ import BooksItem from '../books/BooksItem.vue'
 
 export default {
     setup() {
-        const searchBooks = ref("")
+        let searchBooks = ref("")
         let showBooks = ref([])
 
-        const resultsBooks = () => {
-           console.log(showBooks.value)
+        const resultsBooks = () => {  
+           let userInput = searchBooks.value
+           showBooks.value = booksService.getBooksByName(userInput)
+           console.log(userInput)
         }
 
-        showBooks.value = booksService.getBooksByName(searchBooks.value)
-    
+        console.log(showBooks.value)
+
         const books = booksService.getAllBooks()
         
         return {
