@@ -8,6 +8,7 @@
     <p class="card-text">Genre: {{ genre }}</p>
     <p class="card-text">Author: {{ author }}</p>
     <a href="#" class="btn btn-primary">Add to reading list</a>
+    <books-rating></books-rating>
   </div>
   </div>
   </article>
@@ -16,6 +17,7 @@
 
 <script>
 // import booksService from "../../service/booksService";
+import booksRating from "../books/BooksRating.vue"
 
 export default({
 
@@ -40,6 +42,10 @@ export default({
 
         return { getImage }
     }, 
+
+    components: {
+        booksRating
+    }
 
 })
 
