@@ -1,8 +1,8 @@
 <template>
 <!-- legger til en input så bruker kan søke på en bok og en event/button-->
-<section class="row">
-   <form class="d-flex mt-3">
-        <input type="text" class="w-25" v-model="searchBooks" placeholder="Søk etter bøker"/>
+<section>
+   <form class="d-flex justify-content-center mt-3">
+        <input type="text" class="me-2 w-50" v-model="searchBooks" placeholder="Søk etter bøker"/>
         <button @click="resultsBooks" type="button" class="btn btn-outline-dark btn-sm w-15">søk</button>
    </form>
     <div class="row" v-if="showBooks.length === 0">
@@ -11,16 +11,15 @@
         :image="booksArray.image"
         :genre="booksArray.genre"
         :author="booksArray.author"
-        ></books-item>
-        </div>
-        <div class="row" v-else>
+        ></books-item></div>
+
+    <div class="row" v-else>
         <books-item v-for="(book,i) in showBooks" :key="i"
         :name="book.name"
         :image="book.image"
         :genre="book.genre"
-        :author="book.author"
-        ></books-item>
-        </div>
+        :author="book.author"></books-item></div>
+
     </section>
 </template>
 
