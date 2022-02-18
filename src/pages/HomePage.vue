@@ -6,6 +6,7 @@
 </template>
 
 <script>
+// Importerer filer som skal vises på homepage 
 import BookList from "../components/books/BookList.vue";
 import booksArray from "../service/booksService";
 

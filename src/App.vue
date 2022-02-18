@@ -8,6 +8,7 @@
 </template>
 
 <script>
+// Navigasjonsbaren er lagt til i denne filen fordi den er felles for alle filene
 import TheNavigation from "./components/shared/TheNavigation.vue";
 
 export default {

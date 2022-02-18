@@ -23,6 +23,8 @@ export default {
     author: String,
   },
 
+// For å kunne vise bildene brukes en try - catch statement for å hente ut path til bildet. 
+
   setup(props) {
     const getImage = () => {
       let image;

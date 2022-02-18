@@ -1,3 +1,5 @@
+// Her har vi laget et array med bøker
+
 const booksService = (function () {
 
     const booksArray = [
@@ -44,7 +46,7 @@ const booksService = (function () {
         return booksArray;
     }
 
-
+    // Funksjon for å filtrere søk
     const getBooksByName = (bookName) => {
         return booksArray.filter(bookObject => bookObject.name === bookName)
     }
