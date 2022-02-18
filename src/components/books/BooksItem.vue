@@ -8,15 +8,14 @@
     <p class="card-text">Genre: {{ genre }}</p>
     <p class="card-text">Author: {{ author }}</p>
     <a href="#" class="btn btn-primary">Add to reading list</a>
-    <books-rating></books-rating>
   </div>
+   <books-rating></books-rating>
   </div>
   </article>
-
 </template>
 
 <script>
-import booksRating from "../books/BooksRating.vue"
+import BooksRating from "../books/BooksRating.vue"
 
 export default({
 
@@ -43,7 +42,7 @@ export default({
     }, 
 
     components: {
-        booksRating
+        BooksRating
     }
 
 })

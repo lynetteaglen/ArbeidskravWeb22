@@ -1,17 +1,17 @@
 <template>
-    <div id="app">
-    <b-form-rating v-model="value" variant="warning" show-value show-clear class="mb-2"></b-form-rating>
-    <p class="mt-2"> Value: {{value}}</p>
+    <div >
+        <button  v-bind:class="{'bi bi-heart': !favorite, 'bi bi-heart-fill': favorite}" @click="favorite = !favorite"></button>
     </div>
+    <div></div>
 </template>
 
 <script>
 export default {
-    name: 'App',
     data() {
-        return {
-            value: 3
+        return{
+            favorite: false
         }
-    }
+    },
+  
 }
 </script>
