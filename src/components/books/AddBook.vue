@@ -1,11 +1,12 @@
 <template>
 <!-- Lager en input som tar i mot titler fra bruker-->
+<section>
   <h1 class="text-center">Legg til en bok i leselista</h1>
   <form class="d-flex justify-content-center mt-3" v-on:submit.prevent="addNewBook">
     <input class="me-2 w-50" v-model="book.name" placeholder="Skriv inn en tittel her" />
     <button class="btn btn-outline-dark btn-sm w-15" type="submit">Legg til</button>
   </form>
-
+</section>
 <section>
   <h2>Din leseliste</h2>
    <ul>
