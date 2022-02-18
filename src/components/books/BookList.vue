@@ -1,11 +1,11 @@
 <template>
 <!-- legger til en input så bruker kan søke på en bok og en event/button-->
-   <form>
-        <input type="text" v-model="searchBooks" placeholder="Søk etter bøker"/>
-        <button @click="resultsBooks" type="button">søk</button>
+<section class="row">
+   <form class="d-flex mt-3">
+        <input type="text" class="w-25" v-model="searchBooks" placeholder="Søk etter bøker"/>
+        <button @click="resultsBooks" type="button" class="btn btn-outline-dark btn-sm w-15">søk</button>
    </form>
-    <section>
-          <div v-if="showBooks.length === 0">
+    <div v-if="showBooks.length === 0">
         <books-item v-for="(booksArray, i) in books" :key="i"
         :name="booksArray.name"
         :image="booksArray.image"

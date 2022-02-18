@@ -1,5 +1,5 @@
 <template>
-  <h1>HJEM</h1>
+  <h1 class="text-center">Bøker</h1>
   <section>
     <book-list v-for="item in booksArray" :key="item"> {{ item }}</book-list>
   </section>
