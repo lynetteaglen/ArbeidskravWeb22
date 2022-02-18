@@ -10,7 +10,7 @@
       </div>
 
       <div class="mx-auto">
-        <books-rating></books-rating>
+          <make-favorite></make-favorite>
       </div>
     </div>
   </article>
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import BooksRating from "../books/BooksRating.vue";
+import MakeFavorite from "./MakeFavorite.vue";
 
 // Her er det brukt en try - catch statement for å finne path til bildet slik at det dukker opp på HomePage
 
@@ -45,7 +45,8 @@ export default {
   },
 
   components: {
-    BooksRating,
+    MakeFavorite
+
   },
 };
 </script>
