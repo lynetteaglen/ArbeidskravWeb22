@@ -16,7 +16,6 @@
 </template>
 
 <script>
-// import booksService from "../../service/booksService";
 import booksRating from "../books/BooksRating.vue"
 
 export default({
