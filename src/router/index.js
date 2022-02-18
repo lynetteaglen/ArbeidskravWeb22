@@ -5,22 +5,22 @@ import ProfilePage from '../pages/ProfilePage.vue'
 const routes = [
 
     {
-        name: "HomePage", 
-        path: "/", 
+        name: "HomePage",
+        path: "/",
         component: HomePage
-    }, 
+    },
 
     {
-        name: "ProfilePage", 
+        name: "ProfilePage",
         path: "/profile",
         component: ProfilePage
     }
-]; 
+];
 
 const router = createRouter({
-    history: createWebHistory(), 
+    history: createWebHistory(),
     routes
 }
-); 
+);
 
-export default router; 
+export default router;
