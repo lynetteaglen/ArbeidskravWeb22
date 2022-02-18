@@ -12,8 +12,7 @@ import booksArray from '../service/booksService'
 export default {
     name: 'App', 
     components: {
-        BookList
-
+        BookList,
     },
 
     data(){

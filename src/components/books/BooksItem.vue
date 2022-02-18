@@ -7,7 +7,6 @@
     <h5 class="card-title">{{ name }}</h5>
     <p class="card-text">Genre: {{ genre }}</p>
     <p class="card-text">Author: {{ author }}</p>
-    <a href="#" class="btn btn-primary">Add to reading list</a>
     <books-rating></books-rating>
   </div>
   </div>
