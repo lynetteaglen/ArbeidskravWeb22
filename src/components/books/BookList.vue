@@ -5,7 +5,7 @@
         <input type="text" class="w-25" v-model="searchBooks" placeholder="Søk etter bøker"/>
         <button @click="resultsBooks" type="button" class="btn btn-outline-dark btn-sm w-15">søk</button>
    </form>
-    <div v-if="showBooks.length === 0">
+    <div class="row" v-if="showBooks.length === 0">
         <books-item v-for="(booksArray, i) in books" :key="i"
         :name="booksArray.name"
         :image="booksArray.image"
@@ -13,7 +13,7 @@
         :author="booksArray.author"
         ></books-item>
         </div>
-        <div v-else>
+        <div class="row" v-else>
         <books-item v-for="(book,i) in showBooks" :key="i"
         :name="book.name"
         :image="book.image"
