@@ -7,15 +7,15 @@
     <h5 class="card-title">{{ name }}</h5>
     <p class="card-text">Genre: {{ genre }}</p>
     <p class="card-text">Author: {{ author }}</p>
-    <books-rating></books-rating>
+    <a href="#" class="btn btn-primary">Add to reading list</a>
   </div>
+   <books-rating></books-rating>
   </div>
   </article>
-
 </template>
 
 <script>
-import booksRating from "../books/BooksRating.vue"
+import BooksRating from "../books/BooksRating.vue"
 
 export default({
 
@@ -42,7 +42,7 @@ export default({
     }, 
 
     components: {
-        booksRating
+        BooksRating
     }
 
 })

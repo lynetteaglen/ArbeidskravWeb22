@@ -39,10 +39,7 @@ export default {
         const resultsBooks = () => {  
            let userInput = searchBooks.value
            showBooks.value = booksService.getBooksByName(userInput)
-           console.log(userInput)
         }
-
-        console.log(showBooks.value)
 
         const books = booksService.getAllBooks()
         
