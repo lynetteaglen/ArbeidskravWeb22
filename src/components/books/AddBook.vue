@@ -1,56 +1,29 @@
 <template>
-
-<section class="container">
     <h2>Legg til en bok i leselista</h2>
-    <div class="col-lg-12 col-sm-6 col-xs-12">
-        <form>
-        <input type="text" v-model="searchBooks" placeholder="Søk etter en bok"/>
-        <button @click="books">Søk</button>
-        </form>
-
-    </div>
-</section>
-
+    <ul>
+        <li v-for="book in books" :key="book">{{book.name}}</li>
+    </ul>
+    <form v-on:submit.prevent="addNewBook">
+        <input v-model="book.name" placeholder="Skriv inn en tittel her"/>
+        <button type="submit">Legg til</button>
+    </form>
 </template>
 
 <script>
 
-import { ref } from 'vue'
+export default {
+    data() {
+        return{
+        books: [{name:"Dune"}],
+        book: {name:"",}
+        }
+        },
 
-export default({
-    setup(){
-
-const books = ref([
-      `Call me by your name`, 
-      `Find me`, 
-      `The Untethered Soul`,
-      `The Power of Now`
-])
-
-const newBook = ref(``) 
-
-const removeBook = (book) => {
-    books.value = books.value.filter((item) => {
-        return book != item
-    }) 
-}
-
-const addBook = () => {
-    if(!books.value.includes(newBook.value)){
-        books.value.push(newBook.value)
+    methods: {
+        addNewBook() {
+            this.books.push({name: this.book.name})
+        }
     }
-    newBook.value = ``
 }
-
-return {
-    books, 
-    newBook, 
-    addBook, 
-    removeBook
-}
-
-    }
-
-})
 
 </script>
