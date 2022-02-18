@@ -39,6 +39,25 @@ const booksService = (function () {
             image: 'eleanor.jpeg',
             genre: 'Fiction',
             author: 'Rainbow Powell'
+        }, 
+
+        {
+            name: 'Matilda', 
+            image: 'matilda.jpeg', 
+            genre: 'Kids', 
+            author: 'Roald Dahl'
+        }, 
+        {
+            name: 'The Alchemist', 
+            image: 'alc.jpeg', 
+            genre: 'Fantasy', 
+            author: 'Paulo Coelho'
+        }, 
+        {
+            name: 'Lullabies', 
+            image: 'lul.jpeg', 
+            genre: 'Poesi', 
+            author: 'Lang Leav'
         }
     ]
 
