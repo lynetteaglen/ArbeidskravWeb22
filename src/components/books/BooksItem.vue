@@ -16,6 +16,8 @@
 <script>
 import BooksRating from "../books/BooksRating.vue"
 
+// Her er det brukt en try - catch statement for å finne path til bildet slik at det dukker opp på HomePage
+
 export default({
 
     props: {
