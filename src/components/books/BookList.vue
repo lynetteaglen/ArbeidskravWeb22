@@ -1,5 +1,6 @@
 <template>
 <!-- legger til en input så bruker kan søke på en bok og en event/button-->
+<!--  husk å søke etter bøker med store forbokstaver (likt som overskriftene)-->
 <section>
    <form class="d-flex justify-content-center mt-3">
         <input type="text" class="me-2 w-50" v-model="searchBooks" placeholder="Søk etter bøker"/>
